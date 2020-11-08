@@ -1,0 +1,115 @@
+<html>
+<head>
+
+<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-database.js"></script>
+<link rel="stylesheet" href="sroll.css">
+<script src="try.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+<center>
+<div>
+	<button onclick="myFunction()"class="model-btn">SignUp</button>
+</div>
+
+
+<br><br><br>
+</center>
+<div  class="model-bg">
+	<div  class="model">
+	Sign UP!!
+	<label>Name:</label>
+	<input type="text" id="name">
+	<label>Password:</label>
+	<input type="text" id="pass">
+	<label for="classes">Choose Class:</label>
+	<select id="class">
+		<option value="Assassin">Assassin</option>
+		<option value="Knight">Knight</option>
+		<option value="Mage">Mage</option>
+		<option value="Archer">Archer</option>
+		<option value="Spearman">Spearman</option>
+	</select>
+<button type="button" onclick="SignIn()">Register</button>
+	<span class="model-close">X</span>
+	</div>
+</div>
+<center>
+<div>
+	<table id="List" class="tablezz" border="1">
+		<tr>
+			<th style="width:10%">Name:</th>
+			<th style="width:10%">Data:</th>
+		</tr>
+	</table>
+</div>
+</center>
+
+<div  class="model-bgs">
+	<div  class="models">
+		<table class="infoTable">
+			<tr>
+				<td>Name</td><td><input type="text" id="nameShow"></td>
+			</tr>
+			<tr>
+				<td>Password</td><td><input type="text" id="passShow"></td>
+			</tr>
+			<tr>
+				<td>Key</td><td><input type="button" disabled id="keyShow"></td>
+			</tr>
+			<tr>
+				<td>Class</td>
+				<td>
+					<input type="button" disabled id="ClassShow">
+				</td>
+
+			</tr>
+
+			<tr>
+				<td>Damage</td><td><input type="button" disabled id="damageShow"></td>
+			</tr>
+			<tr>
+				<td>Level</td><td><input type="button" disabled id="levelShow"></td>
+			</tr>
+			<tr>
+				<td>Max Hp</td><td><input type="button" disabled id="hpShow"></td>
+			</tr>
+			<tr>
+				<td>Max Mana</td><td><input type="button" disabled id="manaShow"></td>
+			</tr>
+		</table>
+		<p style="font-size:10 ">Name and password are editable</p>
+			<center>
+			</center>
+		<span class="model-close1">X</span>
+		<button class="saveBox" id="savee">Save</button>
+		<button class="deleteBox" id="deletee" onclick="zdelete()">Delete</button>
+	</div>
+</div>
+
+
+
+</body>
+
+<script>
+
+modelClose = document.querySelector('.model-close');
+modelClose.addEventListener('click',function(){
+	document.querySelector(".model-bg").classList.remove('bg-active');
+	console.log("modelClosex");
+})
+modelClose1 = document.querySelector('.model-close1');
+modelClose1.addEventListener('click',function(){
+	document.querySelector(".model-bgs").classList.remove('bg-active');
+	console.log("modelClosex");
+})
+
+
+</script>
+
+
+</html>
